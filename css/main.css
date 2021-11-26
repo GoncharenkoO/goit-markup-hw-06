@@ -124,7 +124,6 @@ header {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  transition-timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-menu .item:last-child {
@@ -154,13 +153,14 @@ a.current.link.finger {
   border-radius: 2px;
 }
 
+.section-menu .item .finger {
+  color: var(--primary-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .section-menu .item .finger:hover,
 .section-menu .item .finger:focus {
   color: var(--accent-color);
-}
-
-.section-menu .item .finger {
-  color: var(--primary-text-color);
 }
 
 .section-contacts {
@@ -180,6 +180,11 @@ a.current.link.finger {
   margin-right: 0;
 }
 
+.section-contacts .item:hover,
+.section-contacts .item:focus {
+  color: var(--accent-color);
+}
+
 .contact {
   display: flex;
   align-items: center;
@@ -189,7 +194,7 @@ a.current.link.finger {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
-  transition-timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-contacts .item:hover,
@@ -209,7 +214,7 @@ a.current.link.finger {
   margin-right: 10px;
   cursor: pointer;
   fill: var(--title-text-color);
-  transition-timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact:hover .icon-mail,
@@ -224,7 +229,7 @@ a.current.link.finger {
   margin-right: 10px;
   cursor: pointer;
   fill: var(--title-text-color);
-  transition-timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact:hover .icon-mobile,
@@ -248,15 +253,11 @@ a.current.link.finger {
 
 .keyword {
   display: flex;
-}
-
-.section-info {
-  display: block;
-  justify-content: center;
   align-items: baseline;
 }
 
 .footer-logo {
+  font-family: "Raleway", sans-serif;
   text-decoration: none;
   color: var(--accent-color);
 }
@@ -374,13 +375,12 @@ a.current.link.finger {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  transition-timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   background: rgba(255, 255, 255, 0.1);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-icon {
-  transition-timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: var(--primary-white-color);
 }
 
@@ -389,7 +389,92 @@ a.current.link.finger {
   background-color: var(--accent-color);
 }
 
-.footer-social-link:hover .footer-social-icon,
-.footer-social-link:focus .footer-social-icon {
+/* Footer input */
+
+.cellar-email {
+  width: 570px;
+  margin-left: 93px;
+}
+
+.cellar-email .form {
+  display: flex;
+}
+
+.cellar-text {
+  display: inline-block;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--primary-white-color);
+
+  margin-bottom: 20px;
+}
+
+.field {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: #2f303a;
+}
+
+.field:focus-visible {
+  outline: none;
+}
+
+.field::placeholder {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.picture {
+  width: 24px;
+  height: 24px;
+
   fill: var(--primary-white-color);
+
+  margin-left: 10px;
+}
+
+.btn-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+  height: 50px;
+  padding: 10px 0px;
+  margin-left: 12px;
+
+  border-radius: 4px;
+  border-color: transparent;
+
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  cursor: pointer;
+}
+
+.btn-text:hover,
+.btn-text:focus {
+  background-color: rgba(24, 140, 232, 1);
 }
