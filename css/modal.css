@@ -204,7 +204,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 15px;
+  width: 16px;
   height: 15px;
   margin-right: 9px;
 
@@ -217,7 +217,7 @@
 }
 
 .modal-checkbox:checked + .checkbox-icon {
-  border-color: transparent;
+  border-color: var(--accent-color);
   background-color: var(--accent-color);
 }
 
