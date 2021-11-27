@@ -467,9 +467,8 @@
           </div>
         <div class="cellar-email">
           <p class="cellar-text">Подпишитесь на рассылку</p>
-          <form class="form input">
-              <label for="form-email" class="form-icon"></label>
-              <input class="field" type="email" name="email" id="form-email" placeholder="E-mail" />
+          <form>
+              <input type="email" name="email" id="form-email" placeholder="E-mail" />
               <button type="submit" class="btn-text">Подписаться
                 <svg class="picture" width="24" height="24">
                   <use href="./images/symbol-defs.svg#icon-icon-send"></use>
@@ -491,40 +490,54 @@
           </button>     
             <form class="modal-form">
               <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
-              <label class="modal-label" for="name">Имя
-                <input class="modal-field" type="txt" name="user-name" id="name" placeholder=""  />
-                  <svg class="modal-picture" width="18" height="18">
-                    <use href="./images/symbol-defs.svg#icon-person"></use>
-                  </svg>
-              </label>
-              <label class="modal-label" for="tel" >Телефон
-                <input class="modal-field" type="txt" name="tel" id="tel"  />
-                  <svg class="modal-picture" width="18" height="18">
-                    <use href="./images/symbol-defs.svg#icon-phone"></use>
-                  </svg>
-              </label>
-              <label class="modal-label modal-label--mb20" for="mail"> Почта
-                <input class="modal-field" type="txt" name="mail" id="mail" />
-                  <svg class="modal-picture" width="18" height="18">
-                    <use href="./images/symbol-defs.svg#icon-email"></use>
-                  </svg>
-              </label>
-              <label class="modal-label" for="commentary">Комментарий
-                <textarea class="modal-comment" name="commentary" id="commentary" rows="5" placeholder="Введите текст"></textarea>
-              </label>
-              <div class="checkbox">
-                <label class="checkbox-input" for="checkbox">
-                  <input class="checkbox-visually-hidden" type="checkbox" id="checkbox" />
-                  <svg class="checkbox-icon" width="16" height="16">
-                      <use href="./images/symbol-defs.svg#icon-vector"></use>
-                    </svg>
-                </label>
-                <p class="modal-text">
-                  Соглашаюсь с рассылкой и принимаю&nbsp;
-                </p>
-                <a class="modal-link" href="">Условия договора</a>
+
+              <div class="form-group" role="list">
+                <div class="form-box">
+                  <label for="name">Имя
+                    <input class="modal-field" type="txt" name="user-name" id="name" placeholder=""  />
+                      <svg class="modal-picture" width="18" height="18">
+                        <use href="./images/symbol-defs.svg#icon-person"></use>
+                      </svg>
+                  </label>
+                </div>
+                <div class="form-box">
+                  <label for="tel" >Телефон
+                    <input class="modal-field" type="txt" name="tel" id="tel"  />
+                      <svg class="modal-picture" width="18" height="18">
+                        <use href="./images/symbol-defs.svg#icon-phone"></use>
+                      </svg>
+                  </label>
+                </div>
+                <div class="form-box">
+                  <label for="mail"> Почта
+                    <input class="modal-field" type="txt" name="mail" id="mail" />
+                      <svg class="modal-picture" width="18" height="18">
+                        <use href="./images/symbol-defs.svg#icon-email"></use>
+                      </svg>
+                  </label>
+                </div>
+                 <div class="form-box">
+                  <label for="commentary">Комментарий
+                    <textarea class="modal-comment" name="commentary" id="commentary" rows="5" placeholder="Введите текст"></textarea>
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="checkbox-label" for="checkbox">
+                    <input class="modal-checkbox" type="checkbox" id="checkbox" />
+                    <span class="checkbox-icon">
+                      <svg class="checkbox-icon" width="16" height="15">
+                          <use href="./images/symbol-defs.svg#icon-vector"></use>
+                      </svg>
+                    </span>
+                    <p class="modal-text">
+                      Соглашаюсь с рассылкой и принимаю&nbsp;
+                    </p>
+                    <a class="modal-link" href="">Условия договора</a>
+                  </label>
+                </div>
+                <button class="modal-btn" type="submit">Отправить</button>
+                
               </div>
-              <button class="modal-btn" type="submit">Отправить</button>
             </form>
       </div>     
     </div>
