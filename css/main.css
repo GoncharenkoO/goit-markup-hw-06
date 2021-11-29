@@ -255,7 +255,7 @@ a.current.link.finger {
 .footer span {
   padding-top: 0;
   padding-bottom: 0;
-  color: #ffffff;
+  color: var(--primary-white-color);
 }
 
 .footer:hover,
