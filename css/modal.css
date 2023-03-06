@@ -1,0 +1,53 @@
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--modal-backdrop);
+
+	opacity: 1;
+	transition: opacity var(--time-function), visibility var(--time-function);
+}
+.backdrop.is-hidden {
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+	transform: translate(-50%, -50%) scale(1.1) rotate(180deg);
+}
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(1) rotate(0deg);
+	border-radius: var(--radius);
+	min-width: 408px;
+	min-height: 576px;
+	background-color: var(--modal-fon);
+	box-shadow: var(--modal-shadow);
+
+	transition: transform var(--time-function);
+}
+.modal-icon {
+	position: absolute;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	right: 24px;
+	top: 24px;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	background-color: var(--text-cornflower-color);
+
+	transition: color var(--time-function), background-color var(--time-function);
+}
+.modal-icon:hover,
+.modal-icon:focus {
+	fill: var(--main-white-color);
+	background-color: var(--ocean-color);
+}
