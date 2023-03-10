@@ -21,21 +21,21 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%) scale(1) rotate(0deg);
-	border-radius: var(--radius);
-	min-width: 408px;
+	width: 408px;
 	min-height: 576px;
+	padding: 72px 24px 24px;
+	border-radius: var(--radius);
 	background-color: var(--modal-fon);
 	box-shadow: var(--modal-shadow);
 
+	transform: translate(-50%, -50%) scale(1) rotate(0deg);
 	transition: transform var(--time-function);
 }
 .modal-icon {
 	position: absolute;
-	display: inline-flex;
+	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0;
 	right: 24px;
 	top: 24px;
 	width: 24px;
@@ -50,4 +50,60 @@
 .modal-icon:focus {
 	fill: var(--main-white-color);
 	background-color: var(--ocean-color);
+}
+textarea {
+	resize: none;
+}
+.modal-form {
+	display: inline-flex;
+	flex-direction: column;
+}
+.modal-text {
+	margin-bottom: 16px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5; /* 24/16 */
+	letter-spacing: 0.02em;
+}
+.form-field {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 8px;
+}
+.form-field:nth-child(4) {
+	margin-bottom: 16px;
+}
+.form-label {
+	margin-bottom: 4px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 1.17; /* 14/12 */
+	letter-spacing: 0.04em;
+	color: var(--slate-color);
+}
+.form-input {
+	width: 100%;
+	height: 40px;
+	padding-left: 38px;
+	border-radius: var(--radius);
+	border: var(--border-modal);
+	transition: border-color var(--time-function);
+}
+.form-input:focus {
+	outline: none;
+	border-color: var(--iris-color);
+}
+.form-input:focus ~ .form-icon {
+  background-color: var(--iris-color);
+}
+.form-icon {
+	position: absolute;
+	top: 50%;
+	left: 16px;
+	transform: translateY(-50%);
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background-color: teal;
 }
