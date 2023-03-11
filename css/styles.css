@@ -304,13 +304,22 @@ button {
 	color: var(--footer-text);
 }
 .btn-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  padding: 8px 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	padding: 8px 24px;
 }
 .footer-icon {
-  margin-left: 16px;
-  fill: var(--main-white-color);
+	margin-left: 16px;
+	fill: var(--main-white-color);
+}
+
+.footer-mail:-webkit-autofill,
+.footer-mail:-webkit-autofill:hover,
+.footer-mail:-webkit-autofill:focus {
+	border: var(--footer-input);
+	-webkit-text-fill-color: var(--main-white-color);
+	-webkit-box-shadow: 0 0 0px 1000px var(--primary-color-text) inset;
+	transition: background-color 5000s ease-in-out 0s;
 }
