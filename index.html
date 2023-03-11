@@ -364,47 +364,60 @@
 				</button>
 				<form class="modal-form">
 					<p class="modal-text centered">Leave your contacts and we will call you back</p>
-					<div class="form-box">
-						<div class="form-field">
-							<label for="name" class="form-label">Name</label>
+
+					<label class="form-label">
+						<span class="form-text">Name</span>
+						<span class="form-wrap">
 							<input
 								class="form-input"
 								type="text"
 								name="name"
-								id="name"
 								required
 								pattern="^[a-zA-Za-яА-Я]+$"
 							/>
-							<span class="form-icon"></span>
-						</div>
-						<div class="form-field">
-							<label for="tel" class="form-label">Phone</label>
-							<input class="form-input" type="tel" name="tel" id="tel" required
+							<svg class="form-icon">
+								<use href="./images/symbol-defs.svg#icon-person"></use>
+							</svg>
+						</span>
+					</label>
+
+					<label class="form-label">
+						<span class="form-text">Phone</span>
+						<span class="form-wrap">
+							<input class="form-input" type="tel" name="tel" required
 							pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"/ >
-							<span class="form-icon"></span>
-						</div>
-						<div class="form-field">
-							<label for="mail" class="form-label">Email</label>
-							<input class="form-input" type="email" name="mail" id="mail" />
-              <span class="form-icon"></span>
-						</div>
-						<div class="form-field">
-							<label for="comment" class="form-label">Comment</label>
-							<textarea
-								class="form-text"
-								name="comment"
-								id="comment"
-								placeholder="Text input"
-							></textarea>
-						</div>
-						<div class="form-policy">
-							<input class="form-check" type="checkbox" name="policy" id="policy" />
-							<label class="form-check-desc" for="policy"
-								>I accept the terms and conditions of the <a href="">Privacy Policy</a>
-							</label>
-						</div>
-						<button class="btn" type="submit">Send</button>
-					</div>
+							<svg class="form-icon">
+								<use href="./images/symbol-defs.svg#icon-phone"></use>
+							</svg>
+						</span>
+					</label>
+
+					<label class="form-label">
+						<span class="form-text">Email</span>
+						<span class="form-wrap">
+							<input class="form-input" type="email" name="mail" />
+							<svg class="form-icon">
+								<use href="./images/symbol-defs.svg#icon-email"></use>
+							</svg>
+						</span>
+					</label>
+
+					<label class="form-label">
+						<span class="form-text">Comment</span>
+						<textarea class="form-message" name="comment" placeholder="Text input"></textarea>
+					</label>
+
+					<input class="form-check visually-hidden" type="checkbox" name="policy" id="policy" />
+					<label class="form-check-desc" for="policy">
+						<span class="form-fake">
+							<svg class="form-fake-check" width="10" height="8">
+								<use href="./images/symbol-defs.svg#icon-vector"></use>
+							</svg>
+						</span>
+						I accept the terms and conditions of the&nbsp;
+						<a href="" class="form-desc-span">Privacy Policy</a>
+					</label>
+					<button class="btn" type="submit">Send</button>
 				</form>
 			</div>
 		</div>

@@ -51,13 +51,6 @@
 	fill: var(--main-white-color);
 	background-color: var(--ocean-color);
 }
-textarea {
-	resize: none;
-}
-.modal-form {
-	display: inline-flex;
-	flex-direction: column;
-}
 .modal-text {
 	margin-bottom: 16px;
 	font-weight: 500;
@@ -65,16 +58,18 @@ textarea {
 	line-height: 1.5; /* 24/16 */
 	letter-spacing: 0.02em;
 }
-.form-field {
-	position: relative;
+.modal-form {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 8px;
-}
-.form-field:nth-child(4) {
-	margin-bottom: 16px;
 }
 .form-label {
+	margin-bottom: 8px;
+}
+.form-label:last-child {
+	margin-bottom: 16px;
+}
+.form-text {
+	display: block;
 	margin-bottom: 4px;
 	font-weight: 400;
 	font-size: 12px;
@@ -94,16 +89,82 @@ textarea {
 	outline: none;
 	border-color: var(--iris-color);
 }
-.form-input:focus ~ .form-icon {
-  background-color: var(--iris-color);
+.form-wrap {
+	position: relative;
+	display: block;
 }
 .form-icon {
 	position: absolute;
+	display: block;
 	top: 50%;
 	left: 16px;
 	transform: translateY(-50%);
-	display: inline-block;
 	width: 18px;
-	height: 18px;
-	background-color: teal;
+	height: 24px;
+	fill: var(--primary-color-text);
+	transition: fill var(--time-function);
+}
+.form-input:focus ~ .form-icon {
+	fill: var(--iris-color);
+}
+.form-message {
+	width: 100%;
+	min-height: 120px;
+	padding: 8px 16px;
+	resize: none;
+	border-radius: var(--radius);
+	border: var(--border-modal);
+	transition: border-color var(--time-function);
+}
+.form-message::placeholder {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 1.17; /* 14/12 */
+	letter-spacing: 0.04em;
+	color: var(--message-text);
+}
+.form-message:focus {
+	outline: none;
+	border-color: var(--iris-color);
+}
+.form-check-desc {
+	display: flex;
+	align-items: center;
+	margin-bottom: 24px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 1.17;
+	letter-spacing: 0.04em;
+	color: var(--check-text);
+}
+.form-desc-span {
+	color: var(--iris-color);
+}
+.form-check-desc::before {
+	position: relative;
+	display: block;
+	content: "";
+	width: 16px;
+	height: 16px;
+	border: 1px solid var(--primary-color-text);
+	border-radius: 2px;
+	margin-right: 8px;
+	transition: background-color var(--time-function), border-color var(--time-function);
+	cursor: pointer;
+}
+.form-check:checked + .form-check-desc::before {
+	background-color: var(--ocean-color);
+	border-color: var(--ocean-color);
+}
+
+.form-fake {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 16px;
+	height: 16px;
+}
+.form-fake-check {
+	fill: var(--main-white-color);
 }
