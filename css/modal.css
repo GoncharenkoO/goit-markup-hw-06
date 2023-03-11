@@ -65,7 +65,7 @@
 .form-label {
 	margin-bottom: 8px;
 }
-.form-label:last-child {
+.form-label:nth-last-child(4) {
 	margin-bottom: 16px;
 }
 .form-text {
